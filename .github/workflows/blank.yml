@@ -3,12 +3,10 @@ name: Test Runners
 
 on:
   workflow_dispatch:  # Manual trigger
-  push:
-    branches: [ main ]
 
 jobs:
   test-self-hosted:
-    runs-on: self-hosted  # Will use any available self-hosted runner
+    runs-on: listener  
     steps:
       - name: Runner Info
         run: |
