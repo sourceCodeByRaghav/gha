@@ -28,14 +28,3 @@ jobs:
           echo "=== Docker Info (if available) ==="
           docker --version || echo "Docker not available"
           kubectl version --client || echo "kubectl not available"
-
-  test-github-hosted:
-    runs-on: ubuntu-latest  # GitHub-hosted runner for comparison
-    steps:
-      - name: GitHub Runner Info
-        run: |
-          echo "This is running on GitHub-hosted runner"
-          echo "Runner name: $RUNNER_NAME"
-          echo "Runner OS: $RUNNER_OS"
-          hostname
-          whoami
